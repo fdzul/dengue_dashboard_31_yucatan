@@ -345,7 +345,7 @@ heatmap_confirmados(dataset = x,
 
 #### [**Casos Confirmados**]{style="color:blue"}
 
-```{r bumpmap_national_2022, out.width="100%", out.height="100%"}
+```{r bumpmap_national_2023, out.width="100%", out.height="100%"}
 library(dplyr)
 static_bump_map(dataset = x,
                 year = "2023",
@@ -359,9 +359,7 @@ static_bump_map(dataset = x,
 ```
 
 </div>
-
 </body>
-
 </html>
 
 ### [**Casos Confirmados por JS & Municipio**]{style="color:#7d9029"}
@@ -418,5 +416,128 @@ heatmap_confirmados(dataset = x,
 :::
 
 </body>
-
 </html>
+
+### [ **Hospitalizados por JS & Municipio** ]{style="color:#7d9029"}
+
+<html>
+
+<head>
+
+```{=html}
+<style>
+.myDiv1 {
+  border: 2px outset darkgreen;
+  background-color: darkgreen;
+  text-align: center;
+}
+</style>
+```
+</head>
+
+<body>
+
+::: myDiv1
+<h2>
+
+</h2>
+
+<p>
+
+</p>
+
+#### [**Casos Hospitalizados por Semana & Jurisdición** ]{style="color:#7d9029"}
+
+```{r casos_hospitalizados_semana_jur}
+heatmap_hospitalizados(dataset = x,
+                       year = 2023,
+                       size_text = 3,
+                       state = "YUCATAN",
+                       JS = TRUE)
+```
+
+#### [**Casos Hospitalizados por Semana & Municipio**]{style="color:#7d9029"}
+
+```{r casos_hospitalizados_semana_mpo}
+heatmap_hospitalizados(dataset = x,
+                       year = 2023,
+                       size_text = 3,
+                       state = "YUCATAN",
+                       JS = FALSE)
+```
+:::
+
+</body>
+</html>
+
+
+
+### **<span style="color:#7d9029">Canal Endémico </span>**
+<html>
+<head>
+<style>
+.myDiv1 {
+  border: 2px outset darkgreen;
+  background-color: darkgreen;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="myDiv1">
+  <h2></h2>
+  <p></p>
+#### **<span style="color:#7d9029">Canal Endémico Estatal </span>**
+```{r canal_estatal}
+plotly::ggplotly(boldenr::epi_channel(x = boldenr::dendata_epichannel,
+                                      edo = "YUCATAN", 
+                                      jur = NULL,
+                                      y = x,
+                                      year1 = 2022,
+                                      year2 = 2023,
+                                      x_epi = 34, y_epi = 200,
+                                      x_alerta = 40, y_alerta = 120, 
+                                      x_seg = 40, y_seg = 40,
+                                      x_exito = 37, y_exito = 5))
+
+
+
+```
+
+#### **<span style="color:#7d9029">Canal Endémico Jurisdicción Mérida </span>**
+```{r canal_jur}
+plotly::ggplotly(boldenr::epi_channel(x = y,
+                                      edo = "YUCATAN", 
+                                      jur = "MERIDA",
+                                      mpo = NULL,
+                                      y = x,
+                                      year1 = 2022,
+                                      year2 = 2023,
+                                      x_epi = 20, y_epi = 90,
+                                      x_alerta = 36, y_alerta = 50, 
+                                      x_seg = 35, y_seg = 15,
+                                      x_exito = 42, y_exito = 1))
+
+```
+
+#### **<span style="color:#7d9029">Canal Endémico Jurisdicción Valladolid </span>**
+```{r canal_jur_valladolid}
+plotly::ggplotly(boldenr::epi_channel(x = y,
+                                      edo = "YUCATAN", 
+                                      jur = "VALLADOLID",
+                                      mpo = NULL,
+                                      y = x,
+                                      year1 = 2022,
+                                      year2 = 2023,
+                                      x_epi = 35, y_epi = 25,
+                                      x_alerta = 36, y_alerta = 16, 
+                                      x_seg = 40, y_seg = 10,
+                                      x_exito = 42, y_exito = 1))
+
+```
+</div>
+</body>
+</html>
+
+
