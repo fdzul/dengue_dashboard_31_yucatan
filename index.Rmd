@@ -3,7 +3,7 @@ title: "Programa de Prevención y Control del Dengue de Yucatán"
 output: 
   flexdashboard::flex_dashboard:
       theme: flatly
-output_dir: docs
+output_dir: libs
 cover-image: images/cover.jpg
 ---
 
@@ -359,14 +359,18 @@ static_bump_map(dataset = x,
 ```
 
 </div>
+
 </body>
+
 </html>
 
+### [**Casos Confirmados por JS & Municipio**]{style="color:#7d9029"}
 
-
-### **<span style="color:#7d9029"> Casos Confirmados por JS & Municipio </span>**
 <html>
+
 <head>
+
+```{=html}
 <style>
 .myDiv1 {
   border: 2px outset darkgreen;
@@ -374,14 +378,22 @@ static_bump_map(dataset = x,
   text-align: center;
 }
 </style>
+```
 </head>
+
 <body>
 
-<div class="myDiv1">
-  <h2></h2>
-  <p></p>
+::: myDiv1
+<h2>
 
-#### **<span style="color:#7d9029">Casos por Semana & Jurisdición </span>**
+</h2>
+
+<p>
+
+</p>
+
+#### [**Casos por Semana & Jurisdición**]{style="color:#7d9029"}
+
 ```{r casos_semana_jur}
 heatmap_confirmados(dataset = x, 
                     year = 2023, 
@@ -392,7 +404,8 @@ heatmap_confirmados(dataset = x,
                     EDO = FALSE)
 ```
 
-#### **<span style="color:#7d9029">Casos por Semana & Municipio</span>**
+#### [**Casos por Semana & Municipio**]{style="color:#7d9029"}
+
 ```{r casos_semana_mpo}
 heatmap_confirmados(dataset = x, 
                     year = 2023, 
@@ -402,6 +415,8 @@ heatmap_confirmados(dataset = x,
                     MPO = TRUE,
                     EDO = FALSE)
 ```
-</div>
+:::
+
 </body>
+
 </html>
