@@ -8,7 +8,6 @@ cover-image: images/cover.jpg
 ---
 
 ```{r setup}
-
 # Step 1. load the librarys ####
 options(shiny.maxRequestSize=30*1024^2)
 library(formattable)
@@ -35,7 +34,7 @@ if(as.vector(Sys.info()["sysname"]) == "Darwin"){
     path_arbo <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/DGE/arbo/"
     
     # 2.2 vector control dataset 
-    path_vect <- "/Users/fdzul/Dropbox/cenaprece_datasets/2022/31_yucatan"
+    path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
     path_coord <- paste(path_vect, "DescargaOvitrampasMesFco.txt", sep = "/")
     
 } else if(as.vector(Sys.info()["sysname"]) == "Windows"){
@@ -58,6 +57,7 @@ if(as.vector(Sys.info()["sysname"]) == "Darwin"){
     source("~/Dropbox/r_developments/r_new_functions/3.Functions/heatmap_confirmados.R")
     source("~/Dropbox/r_developments/r_new_functions/3.Functions/heatmap_hospitalizados.R")
     source("~/Dropbox/r_developments/r_new_functions/3.Functions/static_bump_map.R")
+  source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/heatmap_dengue.R")
     
     
     # 1.3 ovitraps dataset 
@@ -113,7 +113,7 @@ if(as.vector(Sys.info()["sysname"]) == "Darwin"){
 
 
 
-# Step 4. Load the dataset ####
+# Step 3. Load the dataset ####
 
 # 3.1 arbovirosis dataset
 x <- boldenr::read_dataset_bol(path = path_arbo,
@@ -146,7 +146,7 @@ if(as.vector(Sys.info()["sysname"]) == "Darwin"){
     load("~/OneDrive/automatic_read_ine_2010/8.RData/block_ine10_mx.RData")
     
     # load the dengue cases hotspots
-    load("~/Dropbox/hotspots_2021/8.RData/cases_hotspots_agebs19.RData")
+    load("~/Dropbox/hotspots_2022/8.RData/cases_hotspots_agebs19.RData")
     cases_hotspots_agebs19 <- cases_hotspots_agebs19 |>
     sf::st_make_valid()
     
@@ -174,7 +174,7 @@ if(as.vector(Sys.info()["sysname"]) == "Darwin"){
     load("D:/OneDrive/automatic_read_sinave/8.RData/epid_channel_data_js.RData")
     
     # dengue dataaset geocoded
-    load("D:/OneDrive/proyects/geocoding_mex/2022/9.RData_geocoded/den2022_positivos.RData")
+    load("D:/OneDrive/proyects/geocoding_mex/2022/9.RData_geocoded/den2023_positivos.RData")
     load("D:/OneDrive/proyects/geocoding_mex/2022/9.RData_geocoded/den_31_yucatan_2022.RData")
     
     # load the vector hotspots
@@ -255,33 +255,20 @@ cl <- boldenr::read_dataset_bol(path = path_vect,
 
 ## Column {.tabset}
 
-### [**Casos por Estado**]{style="color:#7d9029"}
+### **Situacion Epidemiologica Nacional**
 
 <html>
-
 <head>
-
-```{=html}
 <style>
 </style>
-```
 </head>
-
 <body>
+<div >
+  <h2></h2>
+  <p></p>
 
-<div>
-
-<h2>
-
-</h2>
-
-<p>
-
-</p>
-
-::: {style="display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;"}
-#### [**Treemap de casos confirmados**]{style="color:blue"}
-
+<div style = "display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;">
+#### **<span style="color:blue"> Treemap de casos confirmados </span>**
 ```{r treemap_national, out.width="100%", out.height="100%"}
 x  |>
     dplyr::filter(ANO == 2023)  |>
@@ -320,224 +307,104 @@ x  |>
 ```
 
 <div>
-
-#### [**Casos confirmados y serotipos**]{style="color:blue"}
-
+#### **<span style="color:blue"> Casos confirmados y serotipos </span>**
 ```{r casos_serotipos,out.width="100%", out.height="100%"}
+library(magrittr)
 boldenr::plot_state_serotype(dataset = x, 
                                   year = 2023, 
                                   x_serotype  = 0.5, 
                                   y_serotype = 0.17, 
                                   scale_serotype = 1.7)
 ```
+</div>
 
 </div>
-:::
 
-#### [**Casos confirmados por semana**]{style="color:blue"}
+#### **<span style="color:blue"> Casos Confirmados por Estado </span>**
 
-```{r casos_semana}
+```{r heatmap_confirmados_state}
 heatmap_confirmados(dataset = x, 
                     year = 2023, 
                     size_text = 3, 
                     EDO = TRUE)
 ```
 
-#### [**Casos Confirmados**]{style="color:blue"}
-
+#### **<span style="color:blue"> Casos Confirmados por Estado </span>**
 ```{r bumpmap_national_2023, out.width="100%", out.height="100%"}
 library(dplyr)
 static_bump_map(dataset = x,
                 year = "2023",
                 state = TRUE,
                 size_text_value = 2,
-                size_text = 1,
+                size_text = 2,
                 country_text_x = 0.5,
                 country_text_y = 0.8,
                 line_size = 1.5,
                 pal_vir = "viridis")
 ```
 
+
+#### **<span style="color:blue"> Casos Confirmados por Municipio </span>**
+```{r heatmap_confirmados_mun}
+heatmap_dengue(dataset = x,
+               state = NULL,
+               year = "2023",
+               hospitalizados = FALSE,
+               status = 2)
+```
+
+
+#### **<span style="color:blue"> Casos Hospitalizados por Municipio </span>**
+```{r heatmap_hospitalizados_mun}
+heatmap_dengue(dataset = x,
+               state = NULL,
+               year = "2023",
+               hospitalizados = TRUE)
+```
+
+#### **<span style="color:blue"> Canal Epidemiológico por Estado </span>**
+
+```{r epidemiological_channel_by_state}
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/epidemiological_channel.R")
+epidemiological_channel(data = x)
+```
+
 </div>
 </body>
 </html>
 
-### [**Casos Confirmados por JS & Municipio**]{style="color:#7d9029"}
 
-<html>
+### **Casos confirmados por JS & Municipio**
 
-<head>
+### **Hospitalizacdos por JS & Municipio**
 
-```{=html}
-<style>
-.myDiv1 {
-  border: 2px outset darkgreen;
-  background-color: darkgreen;
-  text-align: center;
-}
-</style>
-```
-</head>
+### **Canales Endémicos**
 
-<body>
+### **Casos por Grupos Estatios**
 
-::: myDiv1
-<h2>
-
-</h2>
-
-<p>
-
-</p>
-
-#### [**Casos por Semana & Jurisdición**]{style="color:#7d9029"}
-
-```{r casos_semana_jur}
-heatmap_confirmados(dataset = x, 
-                    year = 2023, 
-                    size_text = 3,
-                    state = "YUCATAN",
-                    JS = TRUE,
-                    MPO = TRUE,
-                    EDO = FALSE)
-```
-
-#### [**Casos por Semana & Municipio**]{style="color:#7d9029"}
-
-```{r casos_semana_mpo}
-heatmap_confirmados(dataset = x, 
-                    year = 2023, 
-                    size_text = 3,
-                    state = "YUCATAN",
-                    JS = FALSE,
-                    MPO = TRUE,
-                    EDO = FALSE)
-```
-:::
-
-</body>
-</html>
-
-### [ **Hospitalizados por JS & Municipio** ]{style="color:#7d9029"}
-
-<html>
-
-<head>
-
-```{=html}
-<style>
-.myDiv1 {
-  border: 2px outset darkgreen;
-  background-color: darkgreen;
-  text-align: center;
-}
-</style>
-```
-</head>
-
-<body>
-
-::: myDiv1
-<h2>
-
-</h2>
-
-<p>
-
-</p>
-
-#### [**Casos Hospitalizados por Semana & Jurisdición** ]{style="color:#7d9029"}
-
-```{r casos_hospitalizados_semana_jur}
-heatmap_hospitalizados(dataset = x,
-                       year = 2023,
-                       size_text = 3,
-                       state = "YUCATAN",
-                       JS = TRUE)
-```
-
-#### [**Casos Hospitalizados por Semana & Municipio**]{style="color:#7d9029"}
-
-```{r casos_hospitalizados_semana_mpo}
-heatmap_hospitalizados(dataset = x,
-                       year = 2023,
-                       size_text = 3,
-                       state = "YUCATAN",
-                       JS = FALSE)
-```
-:::
-
-</body>
-</html>
+### **Casos por Institucuones**
 
 
+# **Vigilancia Entomológica**
 
-### **<span style="color:#7d9029">Canal Endémico </span>**
-<html>
-<head>
-<style>
-.myDiv1 {
-  border: 2px outset darkgreen;
-  background-color: darkgreen;
-  text-align: center;
-}
-</style>
-</head>
-<body>
-
-<div class="myDiv1">
-  <h2></h2>
-  <p></p>
-#### **<span style="color:#7d9029">Canal Endémico Estatal </span>**
-```{r canal_estatal}
-plotly::ggplotly(boldenr::epi_channel(x = boldenr::dendata_epichannel,
-                                      edo = "YUCATAN", 
-                                      jur = NULL,
-                                      y = x,
-                                      year1 = 2022,
-                                      year2 = 2023,
-                                      x_epi = 34, y_epi = 200,
-                                      x_alerta = 40, y_alerta = 120, 
-                                      x_seg = 40, y_seg = 40,
-                                      x_exito = 37, y_exito = 5))
+## Column {.tabset}
 
 
+# **Acciones de Control**
 
-```
+## Column {.tabset}
 
-#### **<span style="color:#7d9029">Canal Endémico Jurisdicción Mérida </span>**
-```{r canal_jur}
-plotly::ggplotly(boldenr::epi_channel(x = y,
-                                      edo = "YUCATAN", 
-                                      jur = "MERIDA",
-                                      mpo = NULL,
-                                      y = x,
-                                      year1 = 2022,
-                                      year2 = 2023,
-                                      x_epi = 20, y_epi = 90,
-                                      x_alerta = 36, y_alerta = 50, 
-                                      x_seg = 35, y_seg = 15,
-                                      x_exito = 42, y_exito = 1))
+# **Cadenas de Transmisión**
 
-```
+## Column {.tabset}
 
-#### **<span style="color:#7d9029">Canal Endémico Jurisdicción Valladolid </span>**
-```{r canal_jur_valladolid}
-plotly::ggplotly(boldenr::epi_channel(x = y,
-                                      edo = "YUCATAN", 
-                                      jur = "VALLADOLID",
-                                      mpo = NULL,
-                                      y = x,
-                                      year1 = 2022,
-                                      year2 = 2023,
-                                      x_epi = 35, y_epi = 25,
-                                      x_alerta = 36, y_alerta = 16, 
-                                      x_seg = 40, y_seg = 10,
-                                      x_exito = 42, y_exito = 1))
+# **Hotspots del Vector**
 
-```
-</div>
-</body>
-</html>
+## Column {.tabset}
+
+# **Mapas del Riesgo de la Transmisión Activa**
+
+## Column {.tabset}
+
 
 
