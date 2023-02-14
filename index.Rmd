@@ -392,9 +392,12 @@ z <- z |>
                  crs = 4326) |>
     dplyr::mutate(ESTATUS_CASO = ifelse(ESTATUS_CASO == 1,
                                    "Probable",
-                                   "Confirmado")) |>
-  dplyr::filter(DES_EDO_RES == "YUCATAN")
+                                   "Confirmado")) 
 
+x <- rgeomex::AGEE_inegi19_mx |> 
+  dplyr::filter(CVE_ENT == "31")
+
+z <- z[x,]
 
 confirmados <- z |>
     dplyr::filter(ESTATUS_CASO == "Confirmado")
@@ -438,18 +441,15 @@ mapview::mapview(probables,
 ```
 
 
-
-
-### **Casos confirmados por JS & Municipio**
+### **Casos Confirmados por JS & Municipio**
 
 ### **Hospitalizados por JS & Municipio**
 
 ### **Canales Endémicos**
 
-### **Casos por Grupos Estatios**
+### **Casos por Grupos Estarios**
 
-### **Casos por Institucuones**
-
+### **Casos por Instituciones**
 
 # **Vigilancia Entomológica**
 
