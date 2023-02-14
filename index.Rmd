@@ -374,9 +374,75 @@ epidemiological_channel(data = x)
 </html>
 
 
+### [**Distribución del Dengue**]{style="color:#990000"}
+
+```{r distribucion_dengue}
+if(as.vector(Sys.info()["sysname"]) == "Darwin"){
+    load("~/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2023/9.geocoded_dataset/dengue_mx_2023.RData")
+    
+} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
+    load("D:/OneDrive/proyects/geocoding_mex/2023/9.geocoded_dataset/dengue_mx_2023.RData")
+
+} else if(as.vector(Sys.info()["sysname"]) == "Linux"){
+    
+}
+
+z <- z |>
+    sf::st_as_sf(coords = c("long", "lat"),
+                 crs = 4326) |>
+    dplyr::mutate(ESTATUS_CASO = ifelse(ESTATUS_CASO == 1,
+                                   "Probable",
+                                   "Confirmado")) |>
+  dplyr::filter(DES_EDO_RES == "YUCATAN")
+
+
+confirmados <- z |>
+    dplyr::filter(ESTATUS_CASO == "Confirmado")
+probables <- z |>
+    dplyr::filter(ESTATUS_CASO == "Probable")
+
+serotype_1 <- z |>
+    dplyr::filter(ESTATUS_CASO == "Confirmado") |>
+    dplyr::filter(DENGUE_SER_TRIPLEX == 1)
+serotype_2 <- z |>
+    dplyr::filter(ESTATUS_CASO == "Confirmado") |>
+    dplyr::filter(DENGUE_SER_TRIPLEX == 2)
+serotype_3 <- z |>
+    dplyr::filter(ESTATUS_CASO == "Confirmado") |>
+    dplyr::filter(DENGUE_SER_TRIPLEX == 3)
+serotype_4 <- z |>
+    dplyr::filter(ESTATUS_CASO == "Confirmado") |>
+    dplyr::filter(DENGUE_SER_TRIPLEX == 4)
+
+##############
+mapview::mapview(probables,
+                 col.regions = "#898F9C",
+                 color = "white",
+                 layer.name = "Probables") +
+    mapview::mapview(confirmados,
+                     col.regions = "#4267B2",
+                     color = "white",
+                     layer.name = "Positivos") +
+    mapview::mapview(serotype_1,
+                     col.regions = "#36C5F0",
+                     color = "white",
+                     layer.name = "DENV-1") +
+    mapview::mapview(serotype_2,
+                     col.regions = "#2EB67D",
+                     color = "white",
+                     layer.name = "DENV-2") +
+    mapview::mapview(serotype_3,
+                     col.regions = "#E01E5A",
+                     color = "white",
+                     layer.name = "DENV-3")
+```
+
+
+
+
 ### **Casos confirmados por JS & Municipio**
 
-### **Hospitalizacdos por JS & Municipio**
+### **Hospitalizados por JS & Municipio**
 
 ### **Canales Endémicos**
 
@@ -398,6 +464,7 @@ epidemiological_channel(data = x)
 
 ## Column {.tabset}
 
+
 # **Hotspots del Vector**
 
 ## Column {.tabset}
@@ -405,6 +472,7 @@ epidemiological_channel(data = x)
 # **Mapas del Riesgo de la Transmisión Activa**
 
 ## Column {.tabset}
+
 
 
 
