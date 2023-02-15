@@ -407,7 +407,7 @@ distribution_dengue(geocoded_dataset = z,
 
 #### [**Canal Endémico Jurisdiccional** ]{style="color:#7d9029"}
 
-```{r canel_endemico_jurisdicional}
+```{r canel_endemico_jurisdiccional}
 source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/epi_channel_js.R")
 
 epi_channel_js(dataset = x, state = "YUCATAN")
@@ -416,10 +416,14 @@ epi_channel_js(dataset = x, state = "YUCATAN")
 
 #### [**Canal Endémico Municipal** ]{style="color:#7d9029"}
 
-```{r canel_endemico_jurisdicional}
-source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/epi_channel_js.R")
+```{r canel_endemico_municipal}
+# Step 2. load the function ####
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/epi_channel_mpo.R")
 
-epi_channel_js(dataset = x, state = "YUCATAN")
+# Step 3. apply the function ####
+
+epi_channel_mpo(dataset = x, 
+                state = "YUCATAN")
 
 ```
 
