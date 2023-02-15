@@ -400,9 +400,8 @@ distribution_dengue(geocoded_dataset = z,
 ```
 
 
-### **Casos Confirmados por JS & Municipio**
 
-### [ **Casos Confirmados por JS & Municipio** ]{style="color:#7d9029"}
+### [**Casos Confirmados por JS & Municipio** ]{style="color:#7d9029"}
 
 <html>
 <head>
