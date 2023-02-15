@@ -402,7 +402,56 @@ distribution_dengue(geocoded_dataset = z,
 
 ### **Casos Confirmados por JS & Municipio**
 
+### [ **Casos Confirmados por JS & Municipio** ]{style="color:#7d9029"}
 
+<html>
+<head>
+
+```{=html}
+<style>
+.myDiv1 {
+  border: 2px outset darkgreen;
+  background-color: darkgreen;
+  text-align: center;
+}
+</style>
+```
+</head>
+
+<body>
+
+::: myDiv1
+
+#### [**Casos por Semana & Jurisdición** ]{style="color:#7d9029"}
+
+```{r casos_semana_jur}
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/heatmap_confirmados.R")
+heatmap_confirmados(dataset = x, 
+                    year = 2023, 
+                    size_text = 3,
+                    state = "YUCATAN",
+                    JS = TRUE,
+                    MPO = TRUE,
+                    EDO = FALSE)
+```
+
+#### [**Casos por Semana & Municipio**]{style="color:#7d9029"}
+
+```{r casos_semana_mpo}
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/heatmap_confirmados.R")
+heatmap_confirmados(dataset = x, 
+                    year = 2023, 
+                    size_text = 3,
+                    state = "YUCATAN",
+                    JS = FALSE,
+                    MPO = TRUE,
+                    EDO = FALSE)
+```
+:::
+
+</body>
+
+</html>
 
 
 ### [ **Hospitalizados por JS & Municipio** ]{style="color:#7d9029"}
