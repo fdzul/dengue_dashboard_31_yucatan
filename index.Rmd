@@ -320,6 +320,7 @@ boldenr::plot_state_serotype(dataset = x,
 
 </div>
 
+
 #### **<span style="color:blue"> Casos Confirmados por Estado </span>**
 
 ```{r heatmap_confirmados_state}
@@ -405,6 +406,17 @@ distribution_dengue(geocoded_dataset = z,
 
 ### **Canales Endémicos**
 
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<div >
+  <h2></h2>
+  <p></p>
+
+
 #### [**Canal Endémico Jurisdiccional** ]{style="color:#7d9029"}
 
 ```{r canel_endemico_jurisdiccional}
@@ -427,6 +439,9 @@ epi_channel_mpo(dataset = x,
 
 ```
 
+</div>
+</body>
+</html>
 
 ### **Casos por Grupos Estarios**
 
