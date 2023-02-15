@@ -255,7 +255,7 @@ cl <- boldenr::read_dataset_bol(path = path_vect,
 
 ## Column {.tabset}
 
-### **Situacion Epidemiologica Nacional**
+### **Situación Epidemiologica Nacional**
 
 <html>
 <head>
@@ -308,6 +308,7 @@ x  |>
 
 <div>
 #### **<span style="color:blue"> Casos confirmados y serotipos </span>**
+
 ```{r casos_serotipos,out.width="100%", out.height="100%"}
 library(magrittr)
 boldenr::plot_state_serotype(dataset = x, 
@@ -429,6 +430,41 @@ distribution_dengue(geocoded_dataset = z,
 <p>
 
 </p>
+
+#### [**Casos Por Municipio 2022** ]{style="color:#7d9029"}
+```{r bump_map_mun_2022}
+static_bump_map(dataset = x,
+                year = "2022",
+                state = FALSE,
+                cve_edo = "31",
+                country_text_x = .01,
+                country_text_y = 0.024,
+                axis_start = 1,
+                value_text = 0.37,
+                size_text_value = 4,
+                line_size = 2,
+                size_text_country = 4,
+                pal_vir = "viridis") +
+    ggplot2::coord_sf(xlim = c(-90.5, -86))
+```
+
+#### [**Casos Por Municipio 2023** ]{style="color:#7d9029"}
+```{r bump_map_mun_2023}
+static_bump_map(dataset = x,
+                year = "2023",
+                state = FALSE,
+                cve_edo = "31",
+                country_text_x = .01,
+                country_text_y = 0.024,
+                axis_start = 1,
+                value_text = 0.37,
+                size_text_value = 4,
+                line_size = 2,
+                size_text_country = 4,
+                pal_vir = "viridis") +
+    ggplot2::coord_sf(xlim = c(-90.5, -86))
+```
+
 
 #### [**Casos por Semana & Jurisdición** ]{style="color:#7d9029"}
 
