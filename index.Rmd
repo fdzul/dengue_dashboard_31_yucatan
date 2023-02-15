@@ -363,6 +363,8 @@ heatmap_dengue(dataset = x,
                hospitalizados = TRUE)
 ```
 
+
+
 #### **<span style="color:blue"> Canal Epidemiológico por Estado </span>**
 
 ```{r epidemiological_channel_by_state}
@@ -420,6 +422,13 @@ distribution_dengue(geocoded_dataset = z,
 <body>
 
 ::: myDiv1
+<h2>
+
+</h2>
+
+<p>
+
+</p>
 
 #### [**Casos por Semana & Jurisdición** ]{style="color:#7d9029"}
 
@@ -449,7 +458,6 @@ heatmap_confirmados(dataset = x,
 :::
 
 </body>
-
 </html>
 
 
