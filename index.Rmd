@@ -1350,27 +1350,29 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = FALSE)
 
 ## Column {.tabset}
 
-### [**Yucatan (Probables)**]{style="color:#7d9029"}
+### [**Mérida (Probables)**]{style="color:#7d9029"}
 
-```{r cadenas_yucatan_probable}
-library(magrittr)
+```{r cadenas_Mérida_probable}
 denhotspots::transmission_chains_map(geocoded_dataset = z,
                                      cve_edo = "31",
-                                     locality = NULL,
+                                     locality = "Merida",
                                      dengue_cases = "Probable")
+
+
 ```
 
-### [**Yucatan (Confirmados)**]{style="color:#7d9029"}
+### [**Mérida (Confirmados)**]{style="color:#7d9029"}
 
-```{r cadenas_yucatan_confirmados}
-library(magrittr)
+```{r cadenas_merida_confirmados}
 denhotspots::transmission_chains_map(geocoded_dataset = z,
                                      cve_edo = "31",
-                                     locality = NULL,
+                                     locality = "Merida",
                                      dengue_cases = "Confirmado")
 
 
+
 ```
+
 
 
 
