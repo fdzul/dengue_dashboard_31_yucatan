@@ -1352,7 +1352,7 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = FALSE)
 
 ### [**Mérida (Probables)**]{style="color:#7d9029"}
 
-```{r cadenas_Mérida_probable}
+```{r cadenas_merida_probable}
 denhotspots::transmission_chains_map(geocoded_dataset = z,
                                      cve_edo = "31",
                                      locality = "Merida",
@@ -1369,6 +1369,28 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
                                      locality = "Merida",
                                      dengue_cases = "Confirmado")
 
+
+
+```
+
+### [**Valladolid (Probables)**]{style="color:#7d9029"}
+
+```{r cadenas_valladolid_probable}
+denhotspots::transmission_chains_map(geocoded_dataset = z,
+                                     cve_edo = "31",
+                                     locality = "Valladolid",
+                                     dengue_cases = "Probable")
+
+
+```
+
+### [**Valladolid (Confirmados)**]{style="color:#7d9029"}
+
+```{r cadenas_valladolid_confirmados}
+denhotspots::transmission_chains_map(geocoded_dataset = z,
+                                     cve_edo = "31",
+                                     locality = "Valladolid",
+                                     dengue_cases = "Confirmado")
 
 
 ```
