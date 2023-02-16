@@ -589,8 +589,6 @@ epi_channel_mpo(dataset = x,
 </body>
 </html>
 
-### **Casos por Grupos Estarios**
-
 ### **Casos por Instituciones**
 
 ```{r casos_intituciones_yucatan}
