@@ -640,6 +640,108 @@ apyramid::age_pyramid(age_group = "age_class",
 
 ## Column {.tabset}
 
+### [ **Ovitrampas** ]{style="color:#660033"}
+
+<html>
+
+<head>
+
+```{=html}
+<style>
+.myDiv1 {
+  border: 2px outset darkgreen;
+  background-color: darkgreen;
+  text-align: center;
+}
+</style>
+```
+</head>
+
+<body>
+
+::: myDiv1
+<h2>
+
+</h2>
+
+<p>
+
+</p>
+
+#### [**Áreas Urbanas con Vigilancia Entomológica** ]{style="color:#7d9029"}
+
+```{r vigilancia_entomologica, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center",out.width="90%", cache = TRUE, fig.show = "hold"}
+# 1.load the AGEM of veracruz #####
+library(magrittr)
+library(sf)
+mun <- rgeomex::AGEM_inegi19_mx  |>
+    dplyr::filter(CVE_ENT == "31")
+
+
+# Step 2. load the urban localities ####
+urb_loc <- rgeomex::loc_inegi19_mx  |>
+    dplyr::filter(CVE_ENT == "31")
+
+
+# Step 3. extract the high risk localities ####
+
+# Step 3.1 load the cenaprece metas ####
+x <- readxl::read_xls(path = "1.Datasets/repMetas.xls",
+                      sheet = 1, skip = 11)  |>
+    dplyr::select(1:2, 7:10, 14, 16)  |>
+    dplyr::mutate(cve_mun = stringr::str_sub(MUNICIPIO, start = 1, end = 3),
+                  cve_loc = stringr::str_sub(LOCALIDAD, start = 1, end = 4))
+# Step 3.2 extract high risk localities 
+urb_loc_hr <- urb_loc  |>
+    dplyr::filter(CVE_MUN %in% c(x$cve_mun))  |>
+    dplyr::filter(CVE_LOC %in% c(x$cve_loc))
+
+
+# Step 4. extract the localities with ovitraps ####
+y <- readxl::read_xls(path = "1.Datasets/repMetas.xls",
+                      sheet = 1, skip = 11)  |>
+    dplyr::select(1:2, 7:10, 14, 16)  |>
+    dplyr::mutate(cve_mun = stringr::str_sub(MUNICIPIO, start = 1, end = 3),
+                  cve_loc = stringr::str_sub(LOCALIDAD, start = 1, end = 4))  |>
+    dplyr::filter(`CON OVITRAMPAS` == "Sí")
+urb_loc_hr_ovi <- urb_loc  |>
+    dplyr::filter(CVE_MUN %in% c(y$cve_mun))  |>
+    dplyr::filter(CVE_LOC %in% c(y$cve_loc, "0037"))
+
+mapview::mapview(urb_loc_hr,
+                 layer.name = "Localidades de Alto Riesgo",
+                 col.regions = "#E01E5A",
+                 col = "white") +
+    mapview::mapview(urb_loc_hr_ovi,
+                     layer.name = "Localidades con Ovitrampas",
+                     col.regions = "#2EB67D",
+                     col = "white")
+
+
+
+```
+
+#### [**Indicador de Ovitrampas por Casas**]{style="color:#7d9029"}
+
+```{r indicador_ovitrampas_by_ovitrap, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
+ovitraps_occupancy_abundancy(ovitraps_path = path_vect,
+                             scale = "ovitraps")
+
+```
+
+#### [**Indicador de Ovitrampas por Manzana**]{style="color:#7d9029"}
+
+```{r indicador_ovitrampas_by_blocks, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
+ovitraps_occupancy_abundancy(ovitraps_path = path_vect,
+                             scale = "blocks")
+```
+
+:::
+
+</body>
+</html>
+
+
 
 # **Acciones de Control**
 
