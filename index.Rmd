@@ -736,6 +736,34 @@ ovitraps_occupancy_abundancy(ovitraps_path = path_vect,
                              scale = "blocks")
 ```
 
+#### [ **Manzanas Calientes del área urbana de Mérida en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+
+```{r manzanas_calientes_merida, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
+
+# Step 1. load the blocks #####
+
+
+
+# Step 1.1 extract the block of yucatan state ####
+#x <- rgeomex::blocks_ine20_mx_c
+x <- blocks_ine10_mx |> 
+  dplyr::filter(ENTIDAD == 31)
+
+
+
+# Step 2. hotblocks #####
+boldenr::hot_blocks(loc = "Mérida",
+                    x = ovis,
+                    blocks = x,
+                    cve_mpo = "50",
+                    sem1 = lubridate::epiweek(Sys.time())-1,
+                    risk = TRUE)
+
+
+
+```
+
+
 :::
 
 </body>
