@@ -1281,6 +1281,68 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = TRUE)
 </html>
 
 
+### [**Termonebulización**]{style="color:#660033"}
+
+<html>
+
+<head>
+
+```{=html}
+<style>
+.myDiv1 {
+  border: 2px outset darkgreen;
+  background-color: white;
+  text-align: center;
+}
+</style>
+```
+</head>
+
+<body>
+
+<div class="myDiv1">
+
+<h2>
+
+</h2>
+
+<p>
+
+</p>
+
+#### [**Termonubulización por Jurisdición Sanitaria**]{style="color:#7d9029"}
+
+```{r termo_yucatan, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
+boldenr::tb_ulv(x = neb, jur = NULL, mun = FALSE, coldfog = FALSE)
+```
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+#### [**Termonebulización Municipio de la Jurisdición 01 Mérida**]{style="color:#7d9029"}
+
+```{r termo_merida, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
+boldenr::tb_ulv(x = neb, jur = "Mérida", mun = TRUE, coldfog = FALSE)
+```
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+#### [**Termonebulización por Municipio de la Jurisdición 02 Valladolid**]{style="color:#7d9029"}
+
+```{r termo_valladolid, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
+boldenr::tb_ulv(x = neb, jur = "Valladolid", mun = TRUE, coldfog = FALSE)
+```
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+#### [**Termonebulización por Municipio de la Jurisdición 03 Ticul**]{style="color:#7d9029"}
+
+```{r termo_ticul, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
+boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = FALSE)
+```
+
+</div>
+</body>
+</html>
 
 
 
