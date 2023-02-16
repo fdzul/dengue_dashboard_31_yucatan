@@ -787,7 +787,7 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 ```
 
 
-#### [ **Manzanas Calientes de Valladolid en la semana `r lubridate::epiweek(Sys.Date())`**]{style="color:#7d9029"}
+#### [ **Manzanas Calientes de Valladolid en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_valladolid, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 
@@ -805,14 +805,14 @@ boldenr::hot_blocks(loc = "Valladolid",
                     x = ovis,
                     blocks = x,
                     cve_mpo = "102",
-                    sem1 = lubridate::epiweek(Sys.time()),
+                    sem1 = lubridate::epiweek(Sys.time())-1,
                     risk = TRUE)
 
 
 
 ```
 
-#### [ **Predicción del Número de Huevos en el área urbana de Valladolid en la semana `r lubridate::epiweek(Sys.Date())`**]{style="color:#7d9029"}
+#### [ **Predicción del Número de Huevos en el área urbana de Valladolid en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r eggs_prediction_valladolid, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 deneggs::eggs_hotspots(path_lect = path_vect,
@@ -829,7 +829,7 @@ deneggs::eggs_hotspots(path_lect = path_vect,
                        leg_title = "Huevos",
                        plot = FALSE,
                        hist_dataset = FALSE, ##### NOTA
-                       sem = lubridate::epiweek(Sys.Date()),
+                       sem = lubridate::epiweek(Sys.Date())-1,
                        var = "eggs",
                        cell_size = 2000,
                        alpha = .99)$map
