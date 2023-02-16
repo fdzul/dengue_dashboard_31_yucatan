@@ -736,7 +736,7 @@ ovitraps_occupancy_abundancy(ovitraps_path = path_vect,
                              scale = "blocks")
 ```
 
-#### [ **Manzanas Calientes del Ärea Urbana de Mérida en la Semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [ **Manzanas Calientes del Área Urbana de Mérida en la Semana `r lubridate::epiweek(Sys.Date())`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_merida, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 
@@ -756,14 +756,14 @@ boldenr::hot_blocks(loc = "Mérida",
                     x = ovis,
                     blocks = x,
                     cve_mpo = "50",
-                    sem1 = lubridate::epiweek(Sys.time())-1,
+                    sem1 = lubridate::epiweek(Sys.time()),
                     risk = TRUE)
 
 
 
 ```
 
-#### [**Predicción del Número de Huevos en el área urbana de Mérida en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Predicción del Número de Huevos en el área Urbana de Mérida en la semana `r lubridate::epiweek(Sys.Date())`**]{style="color:#7d9029"}
 
 ```{r eggs_prediction_merida, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 deneggs::eggs_hotspots(path_lect = path_vect,
@@ -780,12 +780,61 @@ deneggs::eggs_hotspots(path_lect = path_vect,
                        leg_title = "Huevos",
                        plot = FALSE,
                        hist_dataset = FALSE, ##### NOTA
-                       sem = lubridate::epiweek(Sys.Date())-1,
+                       sem = lubridate::epiweek(Sys.Date()),
                        var = "eggs",
                        cell_size = 2000,
                        alpha = .99)$map
 ```
 
+
+#### [ **Manzanas Calientes de Valladolid en la semana `r lubridate::epiweek(Sys.Date())`**]{style="color:#7d9029"}
+
+```{r manzanas_calientes_valladolid, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
+
+
+# Step 2. load the blocks #####
+#load("C:/Users/HOME/OneDrive/automatic_read_ine_2010/8.RData/block_ine10_mx.RData")
+
+
+# Step 2.1 extract the block of yucatan state ###
+#x <- rgeomex::blocks_ine20_mx_c
+x <- blocks_ine10_mx |> dplyr::filter(ENTIDAD == 31)
+
+# Step 2. hotblocks #####
+boldenr::hot_blocks(loc = "Valladolid",
+                    x = ovis,
+                    blocks = x,
+                    cve_mpo = "102",
+                    sem1 = lubridate::epiweek(Sys.time()),
+                    risk = TRUE)
+
+
+
+```
+
+#### [ **Predicción del Número de Huevos en el área urbana de Valladolid en la semana `r lubridate::epiweek(Sys.Date())`**]{style="color:#7d9029"}
+
+```{r eggs_prediction_valladolid, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
+deneggs::eggs_hotspots(path_lect = path_vect,
+                       cve_ent = 31,
+                       locality  = "Valladolid",
+                       path_coord = path_coord,
+                       longitude  = "Pocision_X",
+                       latitude =  "Pocision_Y",
+                       aproximation = "gaussian",
+                       integration = "eb",
+                       fam = "zeroinflatednbinomial1",
+                       k = 80,
+                       palette_vir  = "magma",
+                       leg_title = "Huevos",
+                       plot = FALSE,
+                       hist_dataset = FALSE, ##### NOTA
+                       sem = lubridate::epiweek(Sys.Date()),
+                       var = "eggs",
+                       cell_size = 2000,
+                       alpha = .99)$map
+
+```
 
 :::
 
