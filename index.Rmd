@@ -723,7 +723,7 @@ mapview::mapview(urb_loc_hr,
 
 #### [**Indicador de Ovitrampas por Casas**]{style="color:#7d9029"}
 
-```{r indicador_ovitrampas_by_ovitrap, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
+```{r indicador_ovitrampas_by_ovitrap, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="80%", fig.show = "hold"}
 ovitraps_occupancy_abundancy(ovitraps_path = path_vect,
                              scale = "ovitraps")
 
@@ -731,7 +731,7 @@ ovitraps_occupancy_abundancy(ovitraps_path = path_vect,
 
 #### [**Indicador de Ovitrampas por Manzana**]{style="color:#7d9029"}
 
-```{r indicador_ovitrampas_by_blocks, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
+```{r indicador_ovitrampas_by_blocks, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="50%", fig.show = "hold"}
 ovitraps_occupancy_abundancy(ovitraps_path = path_vect,
                              scale = "blocks")
 ```
