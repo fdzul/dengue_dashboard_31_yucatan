@@ -1132,6 +1132,102 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 
 ## Column {.tabset}
 
+
+### [ **Control Larvario** ]{style="color:#660033"}
+
+<html>
+
+<head>
+
+```{=html}
+<style>
+.myDiv1 {
+  border: 2px outset darkgreen;
+  background-color: white;
+  text-align: center;
+}
+</style>
+```
+</head>
+
+<body>
+
+<div class="myDiv1">
+
+<h2>
+
+</h2>
+
+<p>
+
+</p>
+
+#### Avances de **Control Larvario** Por **Jurisdicción Sanitaria**
+
+```{r cl_juri, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
+boldenr::cl_table(x = cl, jur = NULL, mun = FALSE)
+```
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+#### [**Avances de Control Larvario por Municipio de la Jurisdición 01 Mérida**]{style="color:#7d9029"}
+
+```{r cl_merida, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
+boldenr::cl_table(x = cl, jur = "Mérida", mun = TRUE)
+```
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+#### [**Avances de Control Larvario en el área urbana de Mérida**]{style="color:#7d9029"}
+
+```{r cl_merida_map, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
+merida_acumulado <- cl_interactive_map(cl_dataset = control_larvario_blocks,
+                                       cve_edo = "31",
+                                       locality = "Mérida",
+                                       time = "Acumulado")
+merida_dos <- cl_interactive_map(cl_dataset = control_larvario_blocks,
+                                       cve_edo = "31",
+                                       locality = "Mérida",
+                                       time = "Últimos Dos Meses")
+merida_uno <- cl_interactive_map(cl_dataset = control_larvario_blocks,
+                                       cve_edo = "31",
+                                       locality = "Mérida",
+                                       time = "Último Mes")
+merida_sem <- cl_interactive_map(cl_dataset = control_larvario_blocks,
+                                       cve_edo = "31",
+                                       locality = "Mérida",
+                                       time = "Última Semana")
+leafsync::sync(merida_acumulado, 
+               merida_dos,
+               merida_uno,
+               merida_sem)
+
+```
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+#### [**Avances de Control Larvario por Municipio de la Jurisdición 02 Valladolid**]{style="color:#7d9029"}
+
+```{r cl_valladolid, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
+boldenr::cl_table(x = cl, jur = "Valladolid", mun = TRUE)
+```
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+#### [**Avances de Control Larvario por Municipio de la Jurisdición 03 Ticul**]{style="color:#7d9029"}
+
+```{r cl_ticul, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
+boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
+```
+
+</div>
+
+</body>
+
+</html>
+
+
+
 # **Cadenas de Transmisión**
 
 ## Column {.tabset}
