@@ -152,8 +152,7 @@ if(as.vector(Sys.info()["sysname"]) == "Darwin"){
     
     # data for epichannel data
     load("~/OneDrive/automatic_read_sinave/8.RData/epid_channel_data_js.RData")
-    load("~/OneDrive/proyects/geocoding_mex/2022/9.RData_geocoded/den2022_positivos.RData")
-    load("~/OneDrive/proyects/geocoding_mex/2022/9.RData_geocoded/den2022_positivos.RData")
+    load("~/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2023/9.geocoded_dataset/dengue_mx_2023.RData")
     
     # load the vector hotspots
     load("~/OneDrive/proyects/hotspots_eggs/8.RData/31_yucatan/betas/31_yucatan_zinb1_betas.RData")
@@ -1350,6 +1349,29 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = FALSE)
 # **Cadenas de Transmisión**
 
 ## Column {.tabset}
+
+### [**Yucatan (Probables)**]{style="color:#7d9029"}
+
+```{r cadenas_yucatan_probable}
+library(magrittr)
+denhotspots::transmission_chains_map(geocoded_dataset = z,
+                                     cve_edo = "31",
+                                     locality = NULL,
+                                     dengue_cases = "Probable")
+```
+
+### [**Yucatan (Confirmados)**]{style="color:#7d9029"}
+
+```{r cadenas_yucatan_confirmados}
+library(magrittr)
+denhotspots::transmission_chains_map(geocoded_dataset = z,
+                                     cve_edo = "31",
+                                     locality = NULL,
+                                     dengue_cases = "Confirmado")
+
+
+```
+
 
 
 # **Hotspots del Vector**
