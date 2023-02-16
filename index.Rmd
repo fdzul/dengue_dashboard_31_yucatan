@@ -593,6 +593,15 @@ epi_channel_mpo(dataset = x,
 
 ### **Casos por Instituciones**
 
+```{r casos_intituciones_yucatan}
+library(formattable)
+boldenr::tb_conf(x = x,
+                 inst = TRUE,
+                 year = 2023,
+                 state = "YUCATAN")
+```
+
+
 # **Vigilancia Entomológica**
 
 ## Column {.tabset}
