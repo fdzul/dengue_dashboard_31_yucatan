@@ -599,7 +599,7 @@ boldenr::tb_conf(x = x,
                  state = "YUCATAN")
 ```
 
-### **Casos por Instituciones**
+### **Casos por Grupos Etarios**
 
 ```{r casos_grupos_etarios_yucatan}
 x |>
