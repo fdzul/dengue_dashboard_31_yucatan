@@ -1395,7 +1395,16 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
 
 ```
 
+### [**Tekax (Probables)**]{style="color:#7d9029"}
 
+```{r cadenas_tekax_confirmados}
+denhotspots::transmission_chains_map(geocoded_dataset = z,
+                                     cve_edo = "31",
+                                     locality = "Tekax de Alvaro Obregon",
+                                     dengue_cases = "Probable")
+
+
+```
 
 
 # **Hotspots del Vector**
