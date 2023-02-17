@@ -1582,7 +1582,7 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = x$betas,
 ```
 
 ### [**Peto**]{style="color:#7d9029"}
-```{r vector_hotspots_ticul}
+```{r vector_hotspots_peto}
 # step 1. define the path for the historic dataset ####
 path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
 path_coord <- paste(path_vect, "DescargaOvitrampasMesFco.txt", sep = "/")
@@ -1682,7 +1682,6 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = x$betas,
                                      palette = rcartocolor::carto_pal,
                                      name = "SunsetDark")
 ```
-
 
 
 # **Mapas del Riesgo de la Transmisión Activa**
