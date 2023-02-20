@@ -257,17 +257,30 @@ cl <- boldenr::read_dataset_bol(path = path_vect,
 ### **Situación Epidemiologica Nacional**
 
 <html>
+
 <head>
+
+```{=html}
 <style>
 </style>
+```
 </head>
-<body>
-<div >
-  <h2></h2>
-  <p></p>
 
-<div style = "display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;">
-#### **<span style="color:blue"> Treemap de casos confirmados </span>**
+<body>
+
+<div>
+
+<h2>
+
+</h2>
+
+<p>
+
+</p>
+
+::: {style="display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;"}
+#### [ **Treemap de casos confirmados** ]{style="color:blue"}
+
 ```{r treemap_national, out.width="100%", out.height="100%"}
 x  |>
     dplyr::filter(ANO == 2023)  |>
@@ -306,7 +319,8 @@ x  |>
 ```
 
 <div>
-#### **<span style="color:blue"> Casos confirmados y serotipos </span>**
+
+#### [ **Casos confirmados y serotipos** ]{style="color:blue"}
 
 ```{r casos_serotipos,out.width="100%", out.height="100%"}
 library(magrittr)
@@ -316,12 +330,11 @@ boldenr::plot_state_serotype(dataset = x,
                                   y_serotype = 0.17, 
                                   scale_serotype = 1.7)
 ```
-</div>
 
 </div>
+:::
 
-
-#### **<span style="color:blue"> Casos Confirmados por Estado </span>**
+#### [ **Casos Confirmados por Estado** ]{style="color:blue"}
 
 ```{r heatmap_confirmados_state}
 heatmap_confirmados(dataset = x, 
@@ -330,7 +343,8 @@ heatmap_confirmados(dataset = x,
                     EDO = TRUE)
 ```
 
-#### **<span style="color:blue"> Casos Confirmados por Estado </span>**
+#### [ **Casos Confirmados por Estado** ]{style="color:blue"}
+
 ```{r bumpmap_national_2023, out.width="100%", out.height="100%"}
 library(dplyr)
 static_bump_map(dataset = x,
@@ -344,8 +358,8 @@ static_bump_map(dataset = x,
                 pal_vir = "viridis")
 ```
 
+#### [ **Casos Confirmados por Municipio** ]{style="color:blue"}
 
-#### **<span style="color:blue"> Casos Confirmados por Municipio </span>**
 ```{r heatmap_confirmados_mun}
 heatmap_dengue(dataset = x,
                state = NULL,
@@ -354,8 +368,8 @@ heatmap_dengue(dataset = x,
                status = 2)
 ```
 
+#### [ **Casos Hospitalizados por Municipio** ]{style="color:blue"}
 
-#### **<span style="color:blue"> Casos Hospitalizados por Municipio </span>**
 ```{r heatmap_hospitalizados_mun}
 heatmap_dengue(dataset = x,
                state = NULL,
@@ -363,9 +377,7 @@ heatmap_dengue(dataset = x,
                hospitalizados = TRUE)
 ```
 
-
-
-#### **<span style="color:blue"> Canal Epidemiológico por Estado </span>**
+#### [ **Canal Epidemiológico por Estado** ]{style="color:blue"}
 
 ```{r epidemiological_channel_by_state}
 source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/epidemiological_channel.R")
@@ -373,9 +385,10 @@ epidemiological_channel(data = x)
 ```
 
 </div>
-</body>
-</html>
 
+</body>
+
+</html>
 
 ### [**Distribución del Dengue**]{style="color:#990000"}
 
@@ -401,11 +414,10 @@ distribution_dengue(geocoded_dataset = z,
 
 ```
 
-
-
-### [**Casos Confirmados por JS & Municipio** ]{style="color:#7d9029"}
+### [**Casos Confirmados por JS & Municipio**]{style="color:#7d9029"}
 
 <html>
+
 <head>
 
 ```{=html}
@@ -430,7 +442,8 @@ distribution_dengue(geocoded_dataset = z,
 
 </p>
 
-#### [**Casos Por Municipio 2022** ]{style="color:#7d9029"}
+#### [**Casos Por Municipio 2022**]{style="color:#7d9029"}
+
 ```{r bump_map_mun_2022}
 static_bump_map(dataset = x,
                 year = "2022",
@@ -447,7 +460,8 @@ static_bump_map(dataset = x,
     ggplot2::coord_sf(xlim = c(-90.5, -86))
 ```
 
-#### [**Casos Por Municipio 2023** ]{style="color:#7d9029"}
+#### [**Casos Por Municipio 2023**]{style="color:#7d9029"}
+
 ```{r bump_map_mun_2023}
 static_bump_map(dataset = x,
                 year = "2023",
@@ -464,8 +478,7 @@ static_bump_map(dataset = x,
     ggplot2::coord_sf(xlim = c(-90.5, -86))
 ```
 
-
-#### [**Casos por Semana & Jurisdición** ]{style="color:#7d9029"}
+#### [**Casos por Semana & Jurisdición**]{style="color:#7d9029"}
 
 ```{r casos_semana_jur}
 source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/heatmap_confirmados.R")
@@ -493,12 +506,13 @@ heatmap_confirmados(dataset = x,
 :::
 
 </body>
+
 </html>
 
-
-### [ **Hospitalizados por JS & Municipio** ]{style="color:#7d9029"}
+### [**Hospitalizados por JS & Municipio**]{style="color:#7d9029"}
 
 <html>
+
 <head>
 
 ```{=html}
@@ -511,6 +525,7 @@ heatmap_confirmados(dataset = x,
 </style>
 ```
 </head>
+
 <body>
 
 ::: myDiv1
@@ -522,7 +537,7 @@ heatmap_confirmados(dataset = x,
 
 </p>
 
-#### [**Casos Hospitalizados por Semana & Jurisdición** ]{style="color:#7d9029"}
+#### [**Casos Hospitalizados por Semana & Jurisdición**]{style="color:#7d9029"}
 
 ```{r casos_hospitalizados_semana_jur}
 source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/heatmap_hospitalizados.R")
@@ -546,23 +561,34 @@ heatmap_hospitalizados(dataset = x,
 :::
 
 </body>
-</html>
 
+</html>
 
 ### **Canales Endémicos**
 
 <html>
+
 <head>
+
+```{=html}
 <style>
 </style>
+```
 </head>
+
 <body>
-<div >
-  <h2></h2>
-  <p></p>
 
+<div>
 
-#### [**Canal Endémico Jurisdiccional** ]{style="color:#7d9029"}
+<h2>
+
+</h2>
+
+<p>
+
+</p>
+
+#### [**Canal Endémico Jurisdiccional**]{style="color:#7d9029"}
 
 ```{r canel_endemico_jurisdiccional}
 source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/epi_channel_js.R")
@@ -571,7 +597,7 @@ epi_channel_js(dataset = x, state = "YUCATAN")
 
 ```
 
-#### [**Canal Endémico Municipal** ]{style="color:#7d9029"}
+#### [**Canal Endémico Municipal**]{style="color:#7d9029"}
 
 ```{r canel_endemico_municipal}
 # Step 2. load the function ####
@@ -585,7 +611,9 @@ epi_channel_mpo(dataset = x,
 ```
 
 </div>
+
 </body>
+
 </html>
 
 ### **Casos por Instituciones**
@@ -639,7 +667,7 @@ apyramid::age_pyramid(age_group = "age_class",
 
 ## Column {.tabset}
 
-### [ **Ovitrampas** ]{style="color:#660033"}
+### [**Ovitrampas**]{style="color:#660033"}
 
 <html>
 
@@ -667,7 +695,7 @@ apyramid::age_pyramid(age_group = "age_class",
 
 </p>
 
-#### [**Áreas Urbanas con Vigilancia Entomológica** ]{style="color:#7d9029"}
+#### [**Áreas Urbanas con Vigilancia Entomológica**]{style="color:#7d9029"}
 
 ```{r vigilancia_entomologica, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center",out.width="90%", cache = TRUE, fig.show = "hold"}
 # 1.load the AGEM of veracruz #####
@@ -735,7 +763,7 @@ ovitraps_occupancy_abundancy(ovitraps_path = path_vect,
                              scale = "blocks")
 ```
 
-#### [ **Manzanas Calientes del Área Urbana de Mérida en la Semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Manzanas Calientes del Área Urbana de Mérida en la Semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_merida, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 
@@ -785,8 +813,7 @@ deneggs::eggs_hotspots(path_lect = path_vect,
                        alpha = .99)$map
 ```
 
-
-#### [ **Manzanas Calientes de Valladolid en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Manzanas Calientes de Valladolid en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_valladolid, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 
@@ -811,7 +838,7 @@ boldenr::hot_blocks(loc = "Valladolid",
 
 ```
 
-#### [ **Predicción del Número de Huevos en el área urbana de Valladolid en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Predicción del Número de Huevos en el área urbana de Valladolid en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r eggs_prediction_valladolid, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 deneggs::eggs_hotspots(path_lect = path_vect,
@@ -835,8 +862,7 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 
 ```
 
-
-#### [ **Manzanas Calientes de Tizimín en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Manzanas Calientes de Tizimín en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_tizimin, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 
@@ -861,7 +887,7 @@ boldenr::hot_blocks(loc = "Tizimín",
 
 ```
 
-#### [ **Predicción del Número de Huevos en el área urbana de Tizimín en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Predicción del Número de Huevos en el área urbana de Tizimín en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r eggs_prediction_tizimin, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 deneggs::eggs_hotspots(path_lect = path_vect,
@@ -897,7 +923,7 @@ boldenr::ovitraps_indicator(x = ovis,
 
 ```
 
-#### [ **Predicción del Número de Huevos en el área urbana de Piste en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Predicción del Número de Huevos en el área urbana de Piste en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r eggs_prediction_piste, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 deneggs::eggs_hotspots(path_lect = path_vect,
@@ -921,8 +947,7 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 
 ```
 
-
-#### [ **Manzanas Calientes de Ticul en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Manzanas Calientes de Ticul en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_ticul, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 
@@ -947,7 +972,7 @@ boldenr::hot_blocks(loc = "Ticul",
 
 ```
 
-#### [ **Predicción del Número de Huevos en el área urbana de Ticul en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Predicción del Número de Huevos en el área urbana de Ticul en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r eggs_prediction_ticul, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 deneggs::eggs_hotspots(path_lect = path_vect,
@@ -971,8 +996,7 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 
 ```
 
-
-#### [ **Manzanas Calientes de Peto en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Manzanas Calientes de Peto en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_peto, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 
@@ -997,7 +1021,7 @@ boldenr::hot_blocks(loc = "Peto",
 
 ```
 
-#### [ **Predicción del Número de Huevos en el área urbana de Peto en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Predicción del Número de Huevos en el área urbana de Peto en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r eggs_prediction_peto, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 deneggs::eggs_hotspots(path_lect = path_vect,
@@ -1021,7 +1045,7 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 
 ```
 
-#### [ **Manzanas Calientes de Tekax en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Manzanas Calientes de Tekax en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_tekax, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 
@@ -1046,8 +1070,7 @@ boldenr::hot_blocks(loc = "Tekax De Álvaro Obregón",
 
 ```
 
-
-#### [ **Predicción del Número de Huevos en el área urbana de Tekax en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Predicción del Número de Huevos en el área urbana de Tekax en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r eggs_prediction_tekax, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 deneggs::eggs_hotspots(path_lect = path_vect,
@@ -1071,7 +1094,7 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 
 ```
 
-#### [ **Manzanas Calientes de Oxkutzcab en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Manzanas Calientes de Oxkutzcab en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_oxkutzcab, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 
@@ -1096,7 +1119,7 @@ boldenr::hot_blocks(loc = "Oxkutzcab",
 
 ```
 
-#### [ **Predicción del Número de Huevos en el área urbana de Oxkutzcab en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
+#### [**Predicción del Número de Huevos en el área urbana de Oxkutzcab en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r eggs_prediction_oxkutzcab, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
 deneggs::eggs_hotspots(path_lect = path_vect,
@@ -1119,22 +1142,20 @@ deneggs::eggs_hotspots(path_lect = path_vect,
                        alpha = .99)$map
 
 ```
-
 :::
 
 </body>
+
 </html>
-
-
 
 # **Acciones de Control**
 
 ## Column {.tabset}
 
-
-### [ **Control Larvario** ]{style="color:#660033"}
+### [**Control Larvario**]{style="color:#660033"}
 
 <html>
+
 <head>
 
 ```{=html}
@@ -1147,11 +1168,17 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 </style>
 ```
 </head>
+
 <body>
+
 <div class="myDiv1">
+
 <h2>
+
 </h2>
+
 <p>
+
 </p>
 
 #### Avances de **Control Larvario** Por **Jurisdicción Sanitaria**
@@ -1197,7 +1224,6 @@ leafsync::sync(merida_acumulado,
 
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 
-
 #### [**Avances de Control Larvario por Municipio de la Jurisdición 02 Valladolid**]{style="color:#7d9029"}
 
 ```{r cl_valladolid, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
@@ -1213,13 +1239,15 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 ```
 
 </div>
-</body>
-</html>
 
+</body>
+
+</html>
 
 ### [**Mapas de Control Larvario**]{style="color:#660033"}
 
 <html>
+
 <head>
 
 ```{=html}
@@ -1232,14 +1260,21 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 </style>
 ```
 </head>
+
 <body>
+
 <div class="myDiv1">
+
 <h2>
+
 </h2>
+
 <p>
+
 </p>
 
-<div style = "display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;">
+::: 
+{style="display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;"}
 #### [**Área Metropolitana de Mérida**]{style="color:#660033"}
 
 ```{r cl_map_merida_barrido, warning=FALSE, message=FALSE}
@@ -1249,21 +1284,23 @@ htmltools::tags$iframe(src = "cl_map_merida_barr.html",
 ```
 
 #### [**Área Metropolitana de Mérida**]{style="color:#660033"}
+
 ```{r cl_map_merida_focalizado, warning=FALSE, message=FALSE}
 htmltools::tags$iframe(src = "cl_map_merida_foc.html",
                        width = "100%", 
                        height = "700vh")
 ```
-</div>
+:::
+
 </body>
 </html>
 
 
 
-
-### [ **Nebulización en Frío (ULV)**]{style="color:#660033"}
+### [**Nebulización en Frío (ULV)**]{style="color:#660033"}
 
 <html>
+
 <head>
 
 ```{=html}
@@ -1314,8 +1351,8 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = TRUE)
 :::
 
 </body>
-</html>
 
+</html>
 
 ### [**Termonebulización**]{style="color:#660033"}
 
@@ -1377,11 +1414,10 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = FALSE)
 ```
 
 </div>
+
 </body>
+
 </html>
-
-
-
 
 # **Cadenas de Transmisión**
 
@@ -1443,12 +1479,12 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
 
 ```
 
-
 # **Hotspots del Vector**
 
 ## Column {.tabset}
 
 ### [**Mérida**]{style="color:#7d9029"}
+
 ```{r vector_hotspots_merida}
 # step 1. define the path for the historic dataset ####
 path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
@@ -1483,6 +1519,7 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = merida_2023$betas,
 ```
 
 ### [**Valladolid**]{style="color:#7d9029"}
+
 ```{r vector_hotspots_valladolid}
 # step 1. define the path for the historic dataset ####
 path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
@@ -1517,6 +1554,7 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = x$betas,
 ```
 
 ### [**Tizimín**]{style="color:#7d9029"}
+
 ```{r vector_hotspots_tizimin}
 # step 1. define the path for the historic dataset ####
 path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
@@ -1551,6 +1589,7 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = x$betas,
 ```
 
 ### [**Piste**]{style="color:#7d9029"}
+
 ```{r vector_hotspots_piste}
 # step 1. define the path for the historic dataset ####
 path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
@@ -1585,6 +1624,7 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = x$betas,
 ```
 
 ### [**Ticul**]{style="color:#7d9029"}
+
 ```{r vector_hotspots_ticul}
 # step 1. define the path for the historic dataset ####
 path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
@@ -1619,6 +1659,7 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = x$betas,
 ```
 
 ### [**Peto**]{style="color:#7d9029"}
+
 ```{r vector_hotspots_peto}
 # step 1. define the path for the historic dataset ####
 path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
@@ -1653,6 +1694,7 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = x$betas,
 ```
 
 ### [**Tekax**]{style="color:#7d9029"}
+
 ```{r vector_hotspots_tekax}
 # step 1. define the path for the historic dataset ####
 path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
@@ -1687,6 +1729,7 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = x$betas,
 ```
 
 ### [**Oxkutzcab**]{style="color:#7d9029"}
+
 ```{r vector_hotspots_oxkutzcab}
 # step 1. define the path for the historic dataset ####
 path_vect <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan"
@@ -1720,11 +1763,6 @@ deneggs::eggs_hotspots_intensity_map(spde_betas = x$betas,
                                      name = "SunsetDark")
 ```
 
-
 # **Mapas del Riesgo de la Transmisión Activa**
 
 ## Column {.tabset}
-
-
-
-
