@@ -1135,7 +1135,6 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 ### [ **Control Larvario** ]{style="color:#660033"}
 
 <html>
-
 <head>
 
 ```{=html}
@@ -1148,17 +1147,11 @@ deneggs::eggs_hotspots(path_lect = path_vect,
 </style>
 ```
 </head>
-
 <body>
-
 <div class="myDiv1">
-
 <h2>
-
 </h2>
-
 <p>
-
 </p>
 
 #### Avances de **Control Larvario** Por **Jurisdicción Sanitaria**
@@ -1223,10 +1216,47 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 </body>
 </html>
 
+### [**Mapas de Control Larvario**]{style="color:#660033"}
+
+<html>
+<head>
+
+```{=html}
+<style>
+.myDiv1 {
+  border: 2px outset darkgreen;
+  background-color: white;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<div class="myDiv1">
+<h2>
+</h2>
+<p>
+</p>
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+#### [**Área Metropolitana de Mérida**]{style="color:#660033"}
+
+```{r cl_map_merida, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "cl_map_merida.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+
+</div>
+</body>
+</html>
+
+
+
 ### [ **Nebulización en Frío (ULV)**]{style="color:#660033"}
 
 <html>
-
 <head>
 
 ```{=html}
