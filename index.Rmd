@@ -1247,9 +1247,7 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 ### [**Mapas de Control Larvario**]{style="color:#660033"}
 
 <html>
-
 <head>
-
 ```{=html}
 <style>
 .myDiv1 {
@@ -1260,21 +1258,13 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 </style>
 ```
 </head>
-
 <body>
-
 <div class="myDiv1">
-
 <h2>
-
 </h2>
-
 <p>
-
 </p>
-
-::: 
-{style="display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;"}
+:::{style="display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;"}
 #### [**Área Metropolitana de Mérida**]{style="color:#660033"}
 
 ```{r cl_map_merida_barrido, warning=FALSE, message=FALSE}
