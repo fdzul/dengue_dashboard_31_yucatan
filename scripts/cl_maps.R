@@ -19,7 +19,7 @@ source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Function
 table(cl_yuc$Tipo.de.Operativo)
 table(cl_yuc$Localidad, cl_yuc$Jurisdiccion)
 
-# Step . JS 02.
+# Step . merida 
 cl_map_merida_foc <- cl_mapview(cl_dataset = cl_yuc,
                                 cve_edo = "31",
                                 locality = c("Mérida", "Uman", "Kanasin"),

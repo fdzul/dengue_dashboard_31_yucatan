@@ -1195,35 +1195,6 @@ boldenr::cl_table(x = cl, jur = NULL, mun = FALSE)
 boldenr::cl_table(x = cl, jur = "Mérida", mun = TRUE)
 ```
 
-<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
-
-#### [**Avances de Control Larvario en el área urbana de Mérida**]{style="color:#7d9029"}
-
-```{r cl_merida_map, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
-merida_acumulado <- cl_interactive_map(cl_dataset = control_larvario_blocks,
-                                       cve_edo = "31",
-                                       locality = "Mérida",
-                                       time = "Acumulado")
-merida_dos <- cl_interactive_map(cl_dataset = control_larvario_blocks,
-                                       cve_edo = "31",
-                                       locality = "Mérida",
-                                       time = "Últimos Dos Meses")
-merida_uno <- cl_interactive_map(cl_dataset = control_larvario_blocks,
-                                       cve_edo = "31",
-                                       locality = "Mérida",
-                                       time = "Último Mes")
-merida_sem <- cl_interactive_map(cl_dataset = control_larvario_blocks,
-                                       cve_edo = "31",
-                                       locality = "Mérida",
-                                       time = "Última Semana")
-leafsync::sync(merida_acumulado, 
-               merida_dos,
-               merida_uno)
-
-```
-
-<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
-
 #### [**Avances de Control Larvario por Municipio de la Jurisdición 02 Valladolid**]{style="color:#7d9029"}
 
 ```{r cl_valladolid, echo = FALSE, error = TRUE, cache = TRUE,  fig.align = "center", message=FALSE, dpi=300, warning = FALSE,fig.show = "hold"}
@@ -1264,7 +1235,7 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 </h2>
 <p>
 </p>
-:::{style="display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;"}
+:::
 #### [**Área Metropolitana de Mérida**]{style="color:#660033"}
 
 ```{r cl_map_merida_barrido, warning=FALSE, message=FALSE}
