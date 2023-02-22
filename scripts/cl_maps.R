@@ -34,3 +34,9 @@ mapview::mapshot(cl_map_merida_foc,
                  "cl_map_merida_foc.html")
 mapview::mapshot(cl_map_merida_bar,
                  "cl_map_merida_barr.html")
+
+
+
+# 
+
+

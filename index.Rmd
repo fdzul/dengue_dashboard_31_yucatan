@@ -279,7 +279,7 @@ cl <- boldenr::read_dataset_bol(path = path_vect,
 </p>
 
 ::: {style="display: grid; width: 1px; grid-template-columns: 700px 700px; align-items: start; justify-content: space-between;"}
-#### [ **Treemap de casos confirmados** ]{style="color:blue"}
+#### [**Treemap de casos confirmados**]{style="color:blue"}
 
 ```{r treemap_national, out.width="100%", out.height="100%"}
 x  |>
@@ -320,7 +320,7 @@ x  |>
 
 <div>
 
-#### [ **Casos confirmados y serotipos** ]{style="color:blue"}
+#### [**Casos confirmados y serotipos**]{style="color:blue"}
 
 ```{r casos_serotipos,out.width="100%", out.height="100%"}
 library(magrittr)
@@ -334,7 +334,7 @@ boldenr::plot_state_serotype(dataset = x,
 </div>
 :::
 
-#### [ **Casos Confirmados por Estado** ]{style="color:blue"}
+#### [**Casos Confirmados por Estado**]{style="color:blue"}
 
 ```{r heatmap_confirmados_state}
 heatmap_confirmados(dataset = x, 
@@ -343,7 +343,7 @@ heatmap_confirmados(dataset = x,
                     EDO = TRUE)
 ```
 
-#### [ **Casos Confirmados por Estado** ]{style="color:blue"}
+#### [**Casos Confirmados por Estado**]{style="color:blue"}
 
 ```{r bumpmap_national_2023, out.width="100%", out.height="100%"}
 library(dplyr)
@@ -358,7 +358,7 @@ static_bump_map(dataset = x,
                 pal_vir = "viridis")
 ```
 
-#### [ **Casos Confirmados por Municipio** ]{style="color:blue"}
+#### [**Casos Confirmados por Municipio**]{style="color:blue"}
 
 ```{r heatmap_confirmados_mun}
 heatmap_dengue(dataset = x,
@@ -368,7 +368,7 @@ heatmap_dengue(dataset = x,
                status = 2)
 ```
 
-#### [ **Casos Hospitalizados por Municipio** ]{style="color:blue"}
+#### [**Casos Hospitalizados por Municipio**]{style="color:blue"}
 
 ```{r heatmap_hospitalizados_mun}
 heatmap_dengue(dataset = x,
@@ -377,7 +377,7 @@ heatmap_dengue(dataset = x,
                hospitalizados = TRUE)
 ```
 
-#### [ **Canal Epidemiológico por Estado** ]{style="color:blue"}
+#### [**Canal Epidemiológico por Estado**]{style="color:blue"}
 
 ```{r epidemiological_channel_by_state}
 source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/epidemiological_channel.R")
@@ -1215,8 +1215,7 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 
 </html>
 
-
-
+### [**Mapa de Control Larvario**]{style="color:#660033"}
 
 ### [**Nebulización en Frío (ULV)**]{style="color:#660033"}
 
