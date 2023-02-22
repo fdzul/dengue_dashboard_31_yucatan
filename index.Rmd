@@ -1215,46 +1215,6 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 
 </html>
 
-### [**Mapas de Control Larvario**]{style="color:#660033"}
-
-<html>
-<head>
-```{=html}
-<style>
-.myDiv1 {
-  border: 2px outset #660033;
-  background-color: white;
-  text-align: center;
-}
-</style>
-```
-</head>
-<body>
-<div class="myDiv1">
-<h2>
-</h2>
-<p>
-</p>
-:::
-#### [**Área Metropolitana de Mérida**]{style="color:#660033"}
-
-```{r cl_map_merida_barrido, warning=FALSE, message=FALSE}
-htmltools::tags$iframe(src = "cl_map_merida_barr.html",
-                       width = "100%", 
-                       height = "700vh")
-```
-
-#### [**Área Metropolitana de Mérida**]{style="color:#660033"}
-
-```{r cl_map_merida_focalizado, warning=FALSE, message=FALSE}
-htmltools::tags$iframe(src = "cl_map_merida_foc.html",
-                       width = "100%", 
-                       height = "700vh")
-```
-:::
-
-</body>
-</html>
 
 
 
