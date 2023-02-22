@@ -1215,7 +1215,309 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 
 </html>
 
+
+
 ### [**Mapa de Control Larvario**]{style="color:#660033"}
+
+<html>
+
+<head>
+
+```{=html}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 0px;
+  padding: 0px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 0px 0;
+  font-size: 50px;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+</style>
+```
+</head>
+
+<body>
+
+<h1>Mérida</h1>
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+::: grid-container
+::: grid-item
+#### [**Acumulado**]{style="color:#660033;font-size:100%"}
+
+```{r cl_map_merida_barrido_cum, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_merida_barr_cum.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+#### [**Últimos Dos Meses**]{style="color:#660033;font-size:100%"}
+
+```{r cl_map_merida_barrido_two_month, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_merida_barr_two_month.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+#### [**Último Més**]{style="color:#660033;font-size:100%"}
+
+```{r cl_map_merida_barrido_month, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_merida_barr_month.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+#### [**Últimas dos Semanas**]{style="color:#660033;font-size:100%"}
+:::
+
+::: grid-item
+```{r cl_map_merida_foc_cum, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_merida_foc_cum.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+```{r cl_map_merida_foc_two_month, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_merida_foc_two_month.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+```{r cl_map_merida_foc_month, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_merida_foc_month.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+:::
+:::
+
+<p>Las acciones de prevención y control son actualizados los miercoles</p>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+</body>
+
+</html>
+
+
+<html>
+
+<head>
+
+```{=html}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 0px;
+  padding: 0px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 0px 0;
+  font-size: 50px;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+</style>
+```
+</head>
+
+<body>
+
+<h1>Peto</h1>
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+::: grid-container
+::: grid-item
+#### [**Acumulado**]{style="color:#660033;font-size:100%"}
+
+```{r cl_map_peto_foc_cum, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_peto_foc_cum.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+#### [**Últimos Dos Meses**]{style="color:#660033;font-size:100%"}
+
+```{r cl_map_peto_foc_two_month, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_peto_foc_two_month.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+#### [**Último Més**]{style="color:#660033;font-size:100%"}
+
+```{r cl_map_peto_foc_month, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_peto_foc_month.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+#### [**Últimas dos Semanas**]{style="color:#660033;font-size:100%"}
+```{r cl_map_peto_foc_two_week, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_peto_foc_two_week.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+
+:::
+
+::: grid-item
+
+:::
+
+::: grid-item
+
+:::
+
+::: grid-item
+:::
+:::
+
+<p>Las acciones de prevención y control son actualizados los miercoles</p>
+
+</body>
+
+</html>
+
+
+<html>
+
+<head>
+
+```{=html}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 0px;
+  padding: 0px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 0px 0;
+  font-size: 50px;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+</style>
+```
+</head>
+
+<body>
+
+<h1>Oxkutzcab</h1>
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+::: grid-container
+::: grid-item
+#### [**Acumulado**]{style="color:#660033;font-size:100%"}
+
+```{r cl_map_oxkutzcab_barr_cum, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_oxkutzcab_barr_cum.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+#### [**Últimos Dos Meses**]{style="color:#660033;font-size:100%"}
+
+```{r cl_map_oxkutzcab_barr_two_month, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_oxkutzcab_barr_two_month.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+#### [**Último Més**]{style="color:#660033;font-size:100%"}
+
+```{r cl_map_oxkutzcab_barr_month, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_oxkutzcab_barr_month.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+#### [**Últimas dos Semanas**]{style="color:#660033;font-size:100%"}
+```{r cl_map_oxkutzcab_barr_two_week, warning=FALSE, message=FALSE}
+htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_oxkutzcab_barr_two_week.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+:::
+
+::: grid-item
+
+:::
+
+::: grid-item
+
+:::
+
+::: grid-item
+
+:::
+
+::: grid-item
+:::
+:::
+
+<p>Las acciones de prevención y control son actualizados los miercoles</p>
+
+</body>
+
+</html>
+
+
+
+
+
 
 ### [**Nebulización en Frío (ULV)**]{style="color:#660033"}
 
@@ -1273,6 +1575,7 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = TRUE)
 </body>
 
 </html>
+
 
 ### [**Termonebulización**]{style="color:#660033"}
 
@@ -1338,6 +1641,7 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = FALSE)
 </body>
 
 </html>
+
 
 # **Cadenas de Transmisión**
 
