@@ -1643,6 +1643,194 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = FALSE)
 </html>
 
 
+### [**Control de Probables**]{style="color:#660033"}
+
+<html>
+<head>
+
+```{=html}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 50px;
+}
+
+.item {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+</style>
+```
+</head>
+
+<body>
+
+<h1>Jurisdicción Sanitaria 01 Mérida</h1>
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+::: grid-container
+
+::: grid-item
+#### [**2022**]{style="color:#660033;font-size:100%"}
+```{r cp_merida_2022}
+# Step 1. define the path ####
+path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2022/31_yucatan/"
+
+# Step 2. load the function ####
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/control_probables_graph.R")
+
+# Step 3. run the function ####
+control_probables_graph(path = path,
+                        cve_edo = "31",
+                        js = "Mérida")
+```
+:::
+
+::: grid-item
+#### [**2023**]{style="color:#660033;font-size:100%"}
+```{r cp_merida_2023}
+# Step 1. define the path ####
+path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan/"
+
+# Step 2. load the function ####
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/control_probables_graph.R")
+
+# Step 3. run the function ####
+control_probables_graph(path = path,
+                        cve_edo = "31",
+                        js = "Mérida")
+```
+:::
+
+
+:::
+
+<p> </p>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+</body>
+</html>
+
+
+<html>
+<head>
+
+
+</head>
+
+<body>
+
+<h1>Jurisdicción Sanitaria 02 Valladolid</h1>
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+::: grid-container
+
+::: grid-item
+#### [**2022**]{style="color:#660033;font-size:100%"}
+```{r cp_valladolid_2022}
+# Step 1. define the path ####
+path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2022/31_yucatan/"
+
+# Step 2. load the function ####
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/control_probables_graph.R")
+
+# Step 3. run the function ####
+control_probables_graph(path = path,
+                        cve_edo = "31",
+                        js = "Valladolid")
+```
+:::
+
+::: grid-item
+#### [**2023**]{style="color:#660033;font-size:100%"}
+```{r cp_valladolid_2023}
+# Step 1. define the path ####
+path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan/"
+
+# Step 2. load the function ####
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/control_probables_graph.R")
+
+# Step 3. run the function ####
+control_probables_graph(path = path,
+                        cve_edo = "31",
+                        js = "Valladolid")
+```
+:::
+
+
+
+:::
+
+<p> </p>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+</body>
+</html>
+
+
+<html>
+<head>
+
+
+</head>
+
+<body>
+
+<h1>Jurisdicción Sanitaria 03 Ticul</h1>
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+::: grid-container
+
+::: grid-item
+#### [**2022**]{style="color:#660033;font-size:100%"}
+```{r cp_ticul_2022}
+# Step 1. define the path ####
+path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2022/31_yucatan/"
+
+# Step 2. load the function ####
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/control_probables_graph.R")
+
+# Step 3. run the function ####
+control_probables_graph(path = path,
+                        cve_edo = "31",
+                        js = "Ticul")
+```
+:::
+
+::: grid-item
+#### [**2023**]{style="color:#660033;font-size:100%"}
+```{r cp_ticul_2023}
+# Step 1. define the path ####
+path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan/"
+
+# Step 2. load the function ####
+source("~/Library/CloudStorage/Dropbox/r_developments/r_new_functions/3.Functions/boldenr/control_probables_graph.R")
+
+# Step 3. run the function ####
+control_probables_graph(path = path,
+                        cve_edo = "31",
+                        js = "Ticul")
+```
+:::
+
+
+
+
+:::
+
+<p> </p>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+</body>
+</html>
+
+
+
 # **Cadenas de Transmisión**
 
 ## Column {.tabset}
