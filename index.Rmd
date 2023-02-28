@@ -1858,38 +1858,6 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
 
 ```
 
-### [**Valladolid (Probables)**]{style="color:#7d9029"}
-
-```{r cadenas_valladolid_probable}
-denhotspots::transmission_chains_map(geocoded_dataset = z,
-                                     cve_edo = "31",
-                                     locality = "Valladolid",
-                                     dengue_cases = "Probable")
-
-
-```
-
-### [**Valladolid (Confirmados)**]{style="color:#7d9029"}
-
-```{r cadenas_valladolid_confirmados}
-denhotspots::transmission_chains_map(geocoded_dataset = z,
-                                     cve_edo = "31",
-                                     locality = "Valladolid",
-                                     dengue_cases = "Confirmado")
-
-
-```
-
-### [**Tekax (Probables)**]{style="color:#7d9029"}
-
-```{r cadenas_tekax_confirmados}
-denhotspots::transmission_chains_map(geocoded_dataset = z,
-                                     cve_edo = "31",
-                                     locality = "Tekax de Alvaro Obregon",
-                                     dengue_cases = "Probable")
-
-
-```
 
 # **Hotspots del Vector**
 
