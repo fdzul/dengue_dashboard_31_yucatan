@@ -925,33 +925,9 @@ boldenr::ovitraps_indicator(x = ovis,
 
 #### [**Predicción del Número de Huevos en el área urbana de Piste en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
-```{r eggs_prediction_piste, echo=FALSE, error=FALSE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
-deneggs::eggs_hotspots(path_lect = path_vect,
-                       cve_ent = 31,
-                       locality  = "Pisté",
-                       path_coord = path_coord,
-                       longitude  = "Pocision_X",
-                       latitude =  "Pocision_Y",
-                       aproximation = "gaussian",
-                       integration = "eb",
-                       fam = "zeroinflatednbinomial1",
-                       k = 90,
-                       palette_vir  = "magma",
-                       leg_title = "Huevos",
-                       plot = FALSE,
-                       hist_dataset = FALSE, ##### NOTA
-                       sem = lubridate::epiweek(Sys.Date())-1,
-                       var = "eggs",
-                       cell_size = 2000,
-                       alpha = .99)$map
-
-```
-
 #### [**Manzanas Calientes de Ticul en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_ticul, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
-
-
 
 # Step 2. load the blocks #####
 #load("C:/Users/HOME/OneDrive/automatic_read_ine_2010/8.RData/block_ine10_mx.RData")
