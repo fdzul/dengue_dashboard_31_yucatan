@@ -923,7 +923,6 @@ boldenr::ovitraps_indicator(x = ovis,
 
 ```
 
-
 #### [**Manzanas Calientes de Ticul en la semana `r lubridate::epiweek(Sys.Date())-1`**]{style="color:#7d9029"}
 
 ```{r manzanas_calientes_ticul, echo=FALSE, error=TRUE, message=FALSE,dpi=300, warning=FALSE, fig.align = "center", out.width="90%", fig.show = "hold"}
@@ -1190,8 +1189,6 @@ boldenr::cl_table(x = cl, jur = "Ticul", mun = TRUE)
 
 </html>
 
-
-
 ### [**Mapa de Control Larvario**]{style="color:#660033"}
 
 <html>
@@ -1291,12 +1288,12 @@ htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_develo
 :::
 
 <p>Las acciones de prevención y control son actualizados los miercoles</p>
+
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 
 </body>
 
 </html>
-
 
 <html>
 
@@ -1364,6 +1361,7 @@ htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_develo
 
 ::: grid-item
 #### [**Últimas dos Semanas**]{style="color:#660033;font-size:100%"}
+
 ```{r cl_map_peto_foc_two_week, warning=FALSE, message=FALSE}
 htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_peto_foc_two_week.html",
                        width = "100%", 
@@ -1372,15 +1370,12 @@ htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_develo
 :::
 
 ::: grid-item
-
 :::
 
 ::: grid-item
-
 :::
 
 ::: grid-item
-
 :::
 
 ::: grid-item
@@ -1392,7 +1387,6 @@ htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_develo
 </body>
 
 </html>
-
 
 <html>
 
@@ -1460,6 +1454,7 @@ htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_develo
 
 ::: grid-item
 #### [**Últimas dos Semanas**]{style="color:#660033;font-size:100%"}
+
 ```{r cl_map_oxkutzcab_barr_two_week, warning=FALSE, message=FALSE}
 htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_developments/r_new_functions/cl_map_oxkutzcab_barr_two_week.html",
                        width = "100%", 
@@ -1468,15 +1463,12 @@ htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_develo
 :::
 
 ::: grid-item
-
 :::
 
 ::: grid-item
-
 :::
 
 ::: grid-item
-
 :::
 
 ::: grid-item
@@ -1488,11 +1480,6 @@ htmltools::tags$iframe(src = "/Users/fdzul/Library/CloudStorage/Dropbox/r_develo
 </body>
 
 </html>
-
-
-
-
-
 
 ### [**Nebulización en Frío (ULV)**]{style="color:#660033"}
 
@@ -1550,7 +1537,6 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = TRUE)
 </body>
 
 </html>
-
 
 ### [**Termonebulización**]{style="color:#660033"}
 
@@ -1617,10 +1603,10 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = FALSE)
 
 </html>
 
-
 ### [**Control de Probables**]{style="color:#660033"}
 
 <html>
+
 <head>
 
 ```{=html}
@@ -1650,9 +1636,9 @@ boldenr::tb_ulv(x = neb, jur = "Ticul", mun = TRUE, coldfog = FALSE)
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 
 ::: grid-container
-
 ::: grid-item
 #### [**2022**]{style="color:#660033;font-size:100%"}
+
 ```{r cp_merida_2022}
 # Step 1. define the path ####
 path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2022/31_yucatan/"
@@ -1669,6 +1655,7 @@ control_probables_graph(path = path,
 
 ::: grid-item
 #### [**2023**]{style="color:#660033;font-size:100%"}
+
 ```{r cp_merida_2023}
 # Step 1. define the path ####
 path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan/"
@@ -1682,19 +1669,21 @@ control_probables_graph(path = path,
                         js = "Mérida")
 ```
 :::
-
-
 :::
 
-<p> </p>
+<p>
+
+</p>
+
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
 </body>
+
 </html>
 
-
 <html>
-<head>
 
+<head>
 
 </head>
 
@@ -1705,9 +1694,9 @@ control_probables_graph(path = path,
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 
 ::: grid-container
-
 ::: grid-item
 #### [**2022**]{style="color:#660033;font-size:100%"}
+
 ```{r cp_valladolid_2022}
 # Step 1. define the path ####
 path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2022/31_yucatan/"
@@ -1724,6 +1713,7 @@ control_probables_graph(path = path,
 
 ::: grid-item
 #### [**2023**]{style="color:#660033;font-size:100%"}
+
 ```{r cp_valladolid_2023}
 # Step 1. define the path ####
 path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan/"
@@ -1737,20 +1727,21 @@ control_probables_graph(path = path,
                         js = "Valladolid")
 ```
 :::
-
-
-
 :::
 
-<p> </p>
+<p>
+
+</p>
+
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
 </body>
+
 </html>
 
-
 <html>
-<head>
 
+<head>
 
 </head>
 
@@ -1761,9 +1752,9 @@ control_probables_graph(path = path,
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 
 ::: grid-container
-
 ::: grid-item
 #### [**2022**]{style="color:#660033;font-size:100%"}
+
 ```{r cp_ticul_2022}
 # Step 1. define the path ####
 path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2022/31_yucatan/"
@@ -1780,6 +1771,7 @@ control_probables_graph(path = path,
 
 ::: grid-item
 #### [**2023**]{style="color:#660033;font-size:100%"}
+
 ```{r cp_ticul_2023}
 # Step 1. define the path ####
 path <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/CENAPRECE/2023/31_yucatan/"
@@ -1793,18 +1785,17 @@ control_probables_graph(path = path,
                         js = "Ticul")
 ```
 :::
-
-
-
-
 :::
 
-<p> </p>
+<p>
+
+</p>
+
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
 </body>
+
 </html>
-
-
 
 # **Cadenas de Transmisión**
 
@@ -1832,7 +1823,6 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
 
 
 ```
-
 
 # **Hotspots del Vector**
 
